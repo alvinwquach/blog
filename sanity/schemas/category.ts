@@ -9,11 +9,18 @@ export default defineType({
       name: "title",
       title: "Title",
       type: "string",
+      validation: (Rule) => Rule.required(),
+      description: "Please provide a new blog post category.",
     }),
     defineField({
-      name: "description",
-      title: "Description",
-      type: "text",
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "name",
+        maxLength: 90,
+      },
+      validation: (Rule) => Rule.required(),
     }),
   ],
 });
