@@ -10,7 +10,7 @@ import {
 
 function makeClient() {
   const httpLink = new HttpLink({
-    uri: "https://7w83w7c1.api.sanity.io/v1/graphql/production/default",
+    uri: "https://w3qts78m.api.sanity.io/v1/graphql/production/default",
   });
 
   return new NextSSRApolloClient({
